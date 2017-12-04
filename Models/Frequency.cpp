@@ -6,12 +6,14 @@
 
 Frequency::Frequency()
 {
-
+    mID = "";
+    mAssociations = NULL;
 }
 
-Frequency::Frequency(std::string id, LinkedList<Association> associations)
+Frequency::Frequency(std::string id, LinkedList<Association> &associations)
 {
-
+    mID = id;
+    this->mAssociations = associations;
 }
 
 Frequency::~Frequency()

@@ -21,7 +21,7 @@ public:
 
     Frequency();
 
-    Frequency(std::string id, LinkedList<Association> associations);
+    Frequency(std::string id, LinkedList<Association> &associations);
     ~Frequency();
 
     std::string getID();
