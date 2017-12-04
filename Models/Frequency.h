@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 
-#include "LinkedList.h"
+#include "linkedList.h"
 #include "Association.h"
 
 class Frequency {
@@ -19,6 +19,20 @@ private:
 
 public:
 
+    Frequency();
+
+    Frequency(std::string id, LinkedList<Association> associations);
+    ~Frequency();
+
+    std::string getID();
+
+    LinkedList<Association> getAssociations();
+
+    void setID(std::string id);
+    void setAssociations(LinkedList<Association> associations);
+
+    bool searchAssociations(Association association);
+    void addAssociation(Association association);
 
 };
 
