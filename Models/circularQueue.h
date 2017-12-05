@@ -17,7 +17,7 @@
 
 using namespace std;
 
-const int C_CAPACITY = 10;
+const int C_CAPACITY = 2;
 
 template <typename T>
 class CircularQueue
