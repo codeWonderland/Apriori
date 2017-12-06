@@ -18,35 +18,35 @@ Frequency::Frequency(std::string id, LinkedList<Association> &associations)
 
 Frequency::~Frequency()
 {
-
+    mAssociations.clear();
 }
 
 std::string Frequency::getID()
 {
-
+    return mID;
 }
 
 LinkedList<Association> Frequency::getAssociations()
 {
-
+    return mAssociations;
 }
 
 void Frequency::setID(std::string id)
 {
-
+    mID = id;
 }
 
-void Frequency::setAssociations(LinkedList<Association> associations)
+void Frequency::setAssociations(LinkedList<Association> &associations)
 {
-
+    this->mAssociations = associations;
 }
 
 bool Frequency::searchAssociations(Association association)
 {
-
+    mAssociations.isExist(association);
 }
 
 void Frequency::addAssociation(Association association)
 {
-
+    mAssociations.insert(association);
 }

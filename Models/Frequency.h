@@ -29,7 +29,7 @@ public:
     LinkedList<Association> getAssociations();
 
     void setID(std::string id);
-    void setAssociations(LinkedList<Association> associations);
+    void setAssociations(LinkedList<Association> &associations);
 
     bool searchAssociations(Association association);
     void addAssociation(Association association);
