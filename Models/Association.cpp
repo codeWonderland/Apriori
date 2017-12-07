@@ -14,9 +14,6 @@ Association::Association(std::string *mItems, int &mSize, int &mSupport) : Items
 
 }
 
-Association::~Association()
-= default;
-
 int Association::getSupport()
 {
 	return this->mSupport;

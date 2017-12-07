@@ -16,7 +16,7 @@ std::string Itemset::getItem(int index)
 
 void Itemset::setItems(std::string *items)
 {
-	Itemset::mItems = items;
+	this->mItems = items;
 }
 
 bool Itemset::searchItem(const std::string &item)
@@ -39,7 +39,7 @@ int Itemset::getSize() const
 
 void Itemset::setSize(int size)
 {
-	Itemset::mSize = size;
+	this->mSize = size;
 }
 
 Itemset::Itemset()
@@ -48,10 +48,12 @@ Itemset::Itemset()
 	this->mSize = 0;
 }
 
+Itemset::Itemset(int size) : mSize(size)
+{
+	this->mItems = new std::string[size];
+}
+
 Itemset::Itemset(std::string *mItems, int mSize) : mItems(mItems), mSize(mSize)
 {
 
 }
-
-Itemset::~Itemset()
-=default;

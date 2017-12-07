@@ -14,9 +14,11 @@ class Itemset
 
 		Itemset();
 
+		Itemset(int size);
+
 		Itemset(std::string *mItems, int mSize);
 
-		virtual ~Itemset();
+		virtual ~Itemset() = default;
 
 		std::string *getItems() const;
 

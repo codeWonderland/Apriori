@@ -10,7 +10,6 @@
 #include "Models/circularQueue.h"
 #include <fstream>
 #include "Models/linkedList.h"
-#include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <string>
@@ -18,7 +17,7 @@
 #include "Models/Itemset.h"
 
 
-void newFrequency(CircularQueue<Frequency> *frequencyQueue, Frequency &newFrequency);
+void newFrequency(CircularQueue<Frequency> &frequencyQueue, Frequency &newFrequency);
 
 void outputFrequency(Frequency frequency);
 

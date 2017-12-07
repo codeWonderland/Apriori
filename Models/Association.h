@@ -14,7 +14,7 @@ class Association : public Itemset
 
 		Association(std::string *mItems, int &mSize, int &mSupport);
 
-		virtual ~Association();
+		virtual ~Association() = default;
 
 		int getSupport();
 

@@ -5,7 +5,6 @@
 #ifndef FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H
 #define FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H
 
-#include <iostream>
 #include <string>
 
 #include "linkedList.h"
