@@ -1,7 +1,14 @@
 #include <iostream>
+#include "AprioriFunctions.h"
+
 
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
+    Itemset *originalTransactions;
+    std::string fileName = "dataset/T5.N0.1K.D1K.txt";
+
+    loadArray(originalTransactions, fileName);
+
+    delete originalTransactions;
 	return 0;
 }
