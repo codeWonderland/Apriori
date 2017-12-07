@@ -19,7 +19,7 @@ void outputFrequency(Frequency frequency)
 	std::ofstream outFile;
 	outFile.open("output.txt", ios::out | ios::app);
 
-	outFile << "Frequency " + frequency.getID() + ":\n";
+	outFile << "Frequency " << frequency.getID() << ":\n";
 
 	LinkedList<Association> *associationList = frequency.getAssociations();
 
@@ -30,8 +30,6 @@ void outputFrequency(Frequency frequency)
 	std::cout << "Frequency Output Successful" << std::endl;
 
 	outFile.close();
-
-	delete outFile;
 }
 
 void outputList(LinkedList<Association> *linkedList)
@@ -40,28 +38,26 @@ void outputList(LinkedList<Association> *linkedList)
 	std::ofstream outFile;
 	outFile.open("output.txt", ios::out | ios::app);
 
-	LinkedList::Node *tmp = linkedList->mHead;
+	Node<Association> *tmp = linkedList->mHead;
 
-	while (tmp->mData != NULL)
+	while (tmp != nullptr)
 	{
-		for (i; i < tmp->mData->getSize(); i++)
+		for (i = 0; i < tmp->mData.getSize(); i++)
 		{
-			outFile << tmp->mData->getItem(i) + "; Support: " + tmp->mData->getSupport() + "\n";
+			outFile << tmp->mData.getItem(i) << "; Support: " << tmp->mData.getSupport() << "\n";
 		}
 		tmp = tmp->mNext;
 	}
 
 	outFile.close();
-
-	delete outFile;
 }
 
-void addToFrequency(CircularQueue *frequncyQueue, Association *association)
+void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *association)
 {
-	frequncyQueue->mList[frequncyQueue->mTail]->addAssociation(association);
+	frequencyQueue->mList[frequencyQueue->mTail].addAssociation(*association);
 }
 
-void loadArray(Itemset *originalTransactions, std::string fileName)
+void loadArray(Itemset *originalTransactions, const std::string &fileName)
 {
     std::ifstream fin;
     std::string line;

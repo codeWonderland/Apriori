@@ -44,7 +44,7 @@ void Itemset::setSize(int size)
 
 Itemset::Itemset()
 {
-	this->mItems = NULL;
+	this->mItems = nullptr;
 	this->mSize = 0;
 }
 
@@ -54,6 +54,4 @@ Itemset::Itemset(std::string *mItems, int mSize) : mItems(mItems), mSize(mSize)
 }
 
 Itemset::~Itemset()
-{
-
-}
+=default;

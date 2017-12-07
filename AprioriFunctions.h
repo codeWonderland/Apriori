@@ -10,18 +10,18 @@
 #include "Models/circularQueue.h"
 #include <fstream>
 #include "Models/linkedList.h"
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include "Models/Itemset.h"
+
 
 void newFrequency(CircularQueue<Frequency> *frequencyQueue, Frequency &newFrequency);
 
 void outputFrequency(Frequency frequency);
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-
-#include "Models/Itemset.h"
-
-void loadArray(Itemset *originalTransactions);
+void loadArray(Itemset *originalTransactions, const std::string &fileName);
 
 #endif //FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H

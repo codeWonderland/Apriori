@@ -43,7 +43,7 @@ class CircularQueue
 
 		bool isFull();
 
-		friend void addToFrequency(CircularQueue *frequencyQueue, Association *association);
+		friend void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *association);
 };
 
 

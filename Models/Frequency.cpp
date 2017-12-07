@@ -9,7 +9,7 @@
 Frequency::Frequency()
 {
     mID = "";
-    mAssociations = NULL;
+    mAssociations = nullptr;
 }
 
 Frequency::Frequency(std::string id, LinkedList<Association> &associations)
@@ -35,7 +35,7 @@ LinkedList<Association>* Frequency::getAssociations()
 
 void Frequency::setID(std::string id)
 {
-    mID = id;
+    mID = std::move(id);
 }
 
 void Frequency::setAssociations(LinkedList<Association> &associations)
@@ -45,7 +45,7 @@ void Frequency::setAssociations(LinkedList<Association> &associations)
 
 bool Frequency::searchAssociations(Association association)
 {
-    mAssociations->isExist(association);
+    return mAssociations->isExist(association);
 }
 
 void Frequency::addAssociation(Association association)

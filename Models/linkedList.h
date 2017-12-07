@@ -16,40 +16,41 @@
 #include <iostream>
 #include "Frequency.h"
 #include "Association.h"
+#include "Node.h"
 
 using namespace std;
 
 template<typename T>
 class LinkedList
 {
-		template<typename R>
-		struct Node
-		{
-			R mData;
-			Node<R> *mNext;
-
-			/*      Pre:  None
-			 *     Post:  This object is initialized using default values
-			 *  Purpose:  To initialize date object
-			 ********************************************************************/
-			Node()
-			{
-				mData = R();
-				mNext = NULL;
-			}
-
-
-			/*      Pre:  None
-			 *     Post:  This object is initialized using specified data
-			 *  Purpose:  To intialize date object
-			 ********************************************************************/
-			Node(R data)
-			{
-				mData = data;
-				mNext = NULL;
-			}
-		};
-
+//	public:
+//		template<typename R>
+//		struct Node
+//		{
+//			R mData;
+//			Node<R> *mNext;
+//
+//			/*      Pre:  None
+//			 *     Post:  This object is initialized using default values
+//			 *  Purpose:  To initialize date object
+//			 ********************************************************************/
+//			Node()
+//			{
+//				mData = R();
+//				mNext = NULL;
+//			}
+//
+//
+//			/*      Pre:  None
+//			 *     Post:  This object is initialized using specified data
+//			 *  Purpose:  To intialize date object
+//			 ********************************************************************/
+//			Node(R data)
+//			{
+//				mData = data;
+//				mNext = NULL;
+//			}
+//		};
 
 	private:
 		Node<T> *mHead, *mTail;
