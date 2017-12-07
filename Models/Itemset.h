@@ -6,7 +6,7 @@
 #define FA17_CSI281_DECOSTA_EASTER_ITEMSET_H
 
 
-#include <string>
+#include "Node.h"
 
 class Itemset
 {

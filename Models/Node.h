@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 template<typename R>
 struct Node

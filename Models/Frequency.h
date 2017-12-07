@@ -5,10 +5,7 @@
 #ifndef FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H
 #define FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H
 
-#include <string>
-
 #include "linkedList.h"
-#include "Association.h"
 
 class Frequency {
 private:

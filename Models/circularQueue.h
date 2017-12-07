@@ -13,8 +13,7 @@
 #ifndef CIRCULAR_QUEUE_H
 #define CIRCULAR_QUEUE_H
 
-#include <iostream>
-#include "Association.h"
+#include "Frequency.h"
 
 using namespace std;
 

@@ -13,10 +13,7 @@
 #ifndef LINKED_LIST
 #define LINKED_LIST
 
-#include <iostream>
-#include "Frequency.h"
 #include "Association.h"
-#include "Node.h"
 
 using namespace std;
 
