@@ -57,3 +57,19 @@ Itemset::Itemset(std::string *mItems, int mSize) : mItems(mItems), mSize(mSize)
 {
 
 }
+
+bool Itemset::operator==(Itemset itemset) {
+    return false;
+}
+
+bool Itemset::operator!=(Itemset itemset) {
+    return false;
+}
+
+bool Itemset::operator<(Itemset itemset) {
+    return false;
+}
+
+bool Itemset::operator>(Itemset itemset) {
+    return false;
+}
