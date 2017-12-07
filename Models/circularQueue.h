@@ -14,121 +14,130 @@
 #define CIRCULAR_QUEUE_H
 
 #include <iostream>
+#include "Association.h"
 
 using namespace std;
 
 const int C_CAPACITY = 2;
 
-template <typename T>
+template<typename T>
 class CircularQueue
 {
-   private:
-      T   mList[C_CAPACITY];
-      int mHead, mTail, mCount;
+	private:
+		T mList[C_CAPACITY];
 
-   public:
-      CircularQueue();
+		int mHead, mTail, mCount;
 
-      T    dequeue();
-      void display();
-      void enqueue(T data);
-      bool isEmpty();
-      bool isExist(T searchKey);
-      bool isFull();
+	public:
+		CircularQueue();
+
+		T dequeue();
+
+		void display();
+
+		void enqueue(T data);
+
+		bool isEmpty();
+
+		bool isExist(T searchKey);
+
+		bool isFull();
+
+		friend void addToFrequency(CircularQueue *frequencyQueue, Association *association);
 };
 
 
-template <typename T>
+template<typename T>
 CircularQueue<T>::CircularQueue()
 {
-   mHead  = 0;
-   mTail  = 0;
-   mCount = 0;
+	mHead = 0;
+	mTail = 0;
+	mCount = 0;
 }
 
 
-template <typename T>
+
+
+template<typename T>
 T CircularQueue<T>::dequeue()
 {
-   T data = T();
+	T data = T();
 
-   if (!isEmpty())
-   {
-      data = mList[mHead];
-      mHead = (mHead + 1) % C_CAPACITY;
-      mCount--;
-   }
-   else
-      cout << "The list is empty; cannot remove any item\n";
+	if (!isEmpty())
+	{
+		data = mList[mHead];
+		mHead = (mHead + 1) % C_CAPACITY;
+		mCount--;
+	} else
+		cout << "The list is empty; cannot remove any item\n";
 
-   return data;
+	return data;
 }
 
 
-template <typename T>
+template<typename T>
 void CircularQueue<T>::display()
 {
-   int i;
+	int i;
 
-   if (mCount == 0)
-      cout << "Empty list\n";
-   else
-   {
-      for (i = 0; i < mCount; i++)
-         cout << mList[(mHead + i) % C_CAPACITY] << " ";
-      cout << endl;
-   }
+	if (mCount == 0)
+		cout << "Empty list\n";
+	else
+	{
+		for (i = 0; i < mCount; i++)
+			cout << mList[(mHead + i) % C_CAPACITY] << " ";
+		cout << endl;
+	}
 }
 
 
-template <typename T>
+template<typename T>
 void CircularQueue<T>::enqueue(T data)
 {
-   if (!isFull())
-   {
-      if (mCount == 0)
-         mList[mHead] = data;
-      else
-      {
-         mTail = (mTail + 1) % C_CAPACITY; 
-         mList[mTail] = data;
-      }
+	if (!isFull())
+	{
+		if (mCount == 0)
+			mList[mHead] = data;
+		else
+		{
+			mTail = (mTail + 1) % C_CAPACITY;
+			mList[mTail] = data;
+		}
 
-      mCount++;
-   }
-   else
-      cout << "Cannot add to the list; it is full\n";
+		mCount++;
+	} else
+		cout << "Cannot add to the list; it is full\n";
 }
 
 
-template <typename T>
+template<typename T>
 bool CircularQueue<T>::isEmpty()
 {
-   return (mCount == 0);
+	return (mCount == 0);
 }
 
 
-template <typename T>
+template<typename T>
 bool CircularQueue<T>::isExist(T searchKey)
 {
-   int  i;
-   bool found = false;
-   
-   for (i = 0; i < mCount; i++)
-      if (mList[(mHead + i) % C_CAPACITY] == searchKey)
-      {
-         found = true;
-         break;
-      }
+	int i;
+	bool found = false;
 
-   return found;
+	for (i = 0; i < mCount; i++)
+		if (mList[(mHead + i) % C_CAPACITY] == searchKey)
+		{
+			found = true;
+			break;
+		}
+
+	return found;
 }
 
 
-template <typename T>
+template<typename T>
 bool CircularQueue<T>::isFull()
 {
-   return (mCount == C_CAPACITY);
+	return (mCount == C_CAPACITY);
 }
 
 

@@ -9,6 +9,11 @@ std::string *Itemset::getItems() const
 	return mItems;
 }
 
+std::string Itemset::getItem(int index)
+{
+	return mItems[index];
+}
+
 void Itemset::setItems(std::string *items)
 {
 	Itemset::mItems = items;

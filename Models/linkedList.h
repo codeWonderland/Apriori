@@ -14,6 +14,8 @@
 #define LINKED_LIST
 
 #include <iostream>
+#include "Frequency.h"
+#include "Association.h"
 
 using namespace std;
 
@@ -79,6 +81,8 @@ class LinkedList
 		T removeAt(int index);
 
 		T operator[](int index);
+
+		friend void outputList(LinkedList<Association> *linkedList);
 };
 
 

@@ -4,6 +4,8 @@
 
 #include "Frequency.h"
 
+#include <utility>
+
 Frequency::Frequency()
 {
     mID = "";
@@ -12,13 +14,13 @@ Frequency::Frequency()
 
 Frequency::Frequency(std::string id, LinkedList<Association> &associations)
 {
-    mID = id;
-    this->mAssociations = associations;
+    mID = std::move(id);
+    this->mAssociations = &associations;
 }
 
 Frequency::~Frequency()
 {
-    mAssociations.clear();
+    mAssociations->clear();
 }
 
 std::string Frequency::getID()
@@ -26,7 +28,7 @@ std::string Frequency::getID()
     return mID;
 }
 
-LinkedList<Association> Frequency::getAssociations()
+LinkedList<Association>* Frequency::getAssociations()
 {
     return mAssociations;
 }
@@ -38,15 +40,15 @@ void Frequency::setID(std::string id)
 
 void Frequency::setAssociations(LinkedList<Association> &associations)
 {
-    this->mAssociations = associations;
+    this->mAssociations = &associations;
 }
 
 bool Frequency::searchAssociations(Association association)
 {
-    mAssociations.isExist(association);
+    mAssociations->isExist(association);
 }
 
 void Frequency::addAssociation(Association association)
 {
-    mAssociations.insert(association);
+    mAssociations->insert(association);
 }

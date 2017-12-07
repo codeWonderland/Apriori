@@ -20,6 +20,8 @@ class Itemset
 
 		std::string *getItems() const;
 
+		std::string getItem(int index);
+
 		int getSize() const;
 
 		void setSize(int size);
@@ -28,7 +30,7 @@ class Itemset
 
 		bool searchItem(const std::string &item);
 
-	private:
+	protected:
 		std::string *mItems;
 		int mSize;
 };

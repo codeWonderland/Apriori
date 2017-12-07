@@ -15,7 +15,7 @@ class Frequency {
 private:
 
     std::string mID;
-    LinkedList<Association> mAssociations;
+    LinkedList<Association> *mAssociations;
 
 public:
 
@@ -26,7 +26,7 @@ public:
 
     std::string getID();
 
-    LinkedList<Association> getAssociations();
+    LinkedList<Association>* getAssociations();
 
     void setID(std::string id);
     void setAssociations(LinkedList<Association> &associations);
