@@ -5,6 +5,7 @@
 #ifndef FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H
 #define FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H
 
+
 #include "Models/Frequency.h"
 #include "Models/circularQueue.h"
 #include <fstream>
@@ -13,5 +14,14 @@
 void newFrequency(CircularQueue<Frequency> *frequencyQueue, Frequency &newFrequency);
 
 void outputFrequency(Frequency frequency);
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+#include "Models/Itemset.h"
+
+void loadArray(Itemset *originalTransactions);
 
 #endif //FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H
