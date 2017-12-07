@@ -57,7 +57,7 @@ void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *assoc
 	frequencyQueue->mList[frequencyQueue->mTail].addAssociation(*association);
 }
 
-void loadArray(Itemset *originalTransactions, const std::string &fileName)
+void loadArray(Itemset *&originalTransactions, const std::string &fileName)
 {
     std::ifstream fin;
     std::string line;
@@ -95,7 +95,7 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
         ss.clear();                                 // RETURNS TO THE BEGINNING OF THE LINE
         ss.seekg(0, fin.beg);
 
-        tmpArr = new int[numNums];          // ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
+        tmpArr = new int[numNums];          		// ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
 
         for (j = 0; j < numNums; j++)               // LOADS EACH ITEM INTO TMP ARRAY
             ss >> tmpArr[j];
@@ -106,5 +106,4 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
 
     fin.close();
 	tmpArr = nullptr;
-	delete tmpArr;
 }
