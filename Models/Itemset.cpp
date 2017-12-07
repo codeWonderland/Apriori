@@ -58,12 +58,44 @@ Itemset::Itemset(std::string *mItems, int mSize) : mItems(mItems), mSize(mSize)
 
 }
 
-bool Itemset::operator==(Itemset itemset) {
-    return false;
+bool Itemset::operator==(const Itemset &itemset) {
+	int i;
+	bool equal = true;
+	if (this->getSize != itemset.getSize)
+		equal = false;
+	else
+	{
+		for (i = 0; i < this->getSize; i++)
+		{
+			if (this->mItems[i] != itemset.mItems[i])
+			{
+				equal = false;
+				break;
+			}
+		}
+	}
+
+	return equal;
 }
 
-bool Itemset::operator!=(Itemset itemset) {
-    return false;
+bool Itemset::operator!=(const Itemset &itemset) {
+	int i;
+	bool equal = true;
+	if (this->getSize != itemset.getSize)
+		equal = false;
+	else
+	{
+		for (i = 0; i < this->getSize; i++)
+		{
+			if (this->mItems[i] != itemset.mItems[i])
+			{
+				equal = false;
+				break;
+			}
+		}
+	}
+
+	return !equal;
 }
 
 bool Itemset::operator<(Itemset itemset) {
