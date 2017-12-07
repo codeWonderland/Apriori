@@ -79,13 +79,13 @@ bool Itemset::operator==(const Itemset &itemset) {
 }
 
 bool Itemset::operator!=(const Itemset &itemset) {
-	int i;
+	int i, thisSize = this->getSize;
 	bool equal = true;
-	if (this->getSize != itemset.getSize)
+	if (thisSize != itemset.getSize)
 		equal = false;
 	else
 	{
-		for (i = 0; i < this->getSize; i++)
+		for (i = 0; i < thisSize; i++)
 		{
 			if (this->mItems[i] != itemset.mItems[i])
 			{
