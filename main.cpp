@@ -4,7 +4,7 @@
 
 int main()
 {
-    Itemset *originalTransactions;
+    Itemset *originalTransactions = nullptr;
     std::string fileName = "dataset/T5.N0.1K.D1K.txt";
 
     loadArray(originalTransactions, fileName);

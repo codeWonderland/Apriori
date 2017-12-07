@@ -69,6 +69,13 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
 
     fin.open(fileName);
 
+	if (fin.fail())
+	{
+		std::cout << "Couldn't Open Data File\n";
+		system("pause");
+		exit(12);
+	}
+
     while(getline(fin, line))                       //FINDS NUMBER OF ITEMSETS IN THE FILE
         numItemsets++;
 
@@ -98,5 +105,6 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
     }
 
     fin.close();
+	tmpArr = nullptr;
 	delete tmpArr;
 }
