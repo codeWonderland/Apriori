@@ -16,30 +16,36 @@ class Itemset
 
 		Itemset(int size);
 
-		Itemset(std::string *mItems, int mSize);
+		Itemset(int *mItems, int mSize);
 
 		virtual ~Itemset() = default;
 
-		std::string *getItems() const;
+		int *getItems() const;
 
-		std::string getItem(int index);
+		int getItem(int index);
 
 		int getSize() const;
 
 		void setSize(int size);
 
-		void setItems(std::string *items);
+		void setItems(int *items);
 
-		bool searchItem(const std::string &item);
+		bool searchItem(const int &item);
 
+		bool operator<(const Itemset &itemset);
 
-        bool operator<(const Itemset &itemset);
-        bool operator>(const Itemset &itemset);
+		bool operator>(const Itemset &itemset);
+		
+		bool operator<=(const Itemset &itemset);
+
+		bool operator>=(const Itemset &itemset);
+
         bool operator==(const Itemset &itemset);
+
         bool operator!=(const Itemset &itemset);
 
 	protected:
-		std::string *mItems;
+		int *mItems;
 		int mSize;
 };
 
