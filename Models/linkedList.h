@@ -20,35 +20,6 @@ using namespace std;
 template<typename T>
 class LinkedList
 {
-//	public:
-//		template<typename R>
-//		struct Node
-//		{
-//			R mData;
-//			Node<R> *mNext;
-//
-//			/*      Pre:  None
-//			 *     Post:  This object is initialized using default values
-//			 *  Purpose:  To initialize date object
-//			 ********************************************************************/
-//			Node()
-//			{
-//				mData = R();
-//				mNext = NULL;
-//			}
-//
-//
-//			/*      Pre:  None
-//			 *     Post:  This object is initialized using specified data
-//			 *  Purpose:  To intialize date object
-//			 ********************************************************************/
-//			Node(R data)
-//			{
-//				mData = data;
-//				mNext = NULL;
-//			}
-//		};
-
 	private:
 		Node<T> *mHead, *mTail;
 		int mCount;
