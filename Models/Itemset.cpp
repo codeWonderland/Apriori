@@ -59,9 +59,9 @@ Itemset::Itemset(std::string *mItems, int mSize) : mItems(mItems), mSize(mSize)
 }
 
 bool Itemset::operator==(const Itemset &itemset) {
-	int i;
+	int i, thisSize = this->getSize();
 	bool equal = true;
-	if (this->getSize != itemset.getSize)
+	if (this->getSize() != thisSize)
 		equal = false;
 	else
 	{
@@ -79,9 +79,9 @@ bool Itemset::operator==(const Itemset &itemset) {
 }
 
 bool Itemset::operator!=(const Itemset &itemset) {
-	int i, thisSize = this->getSize;
+	int i, thisSize = this->getSize();
 	bool equal = true;
-	if (thisSize != itemset.getSize)
+	if (thisSize != itemset.getSize())
 		equal = false;
 	else
 	{
