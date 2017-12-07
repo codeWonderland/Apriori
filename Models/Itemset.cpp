@@ -66,10 +66,40 @@ bool Itemset::operator!=(Itemset itemset) {
     return false;
 }
 
-bool Itemset::operator<(Itemset itemset) {
-    return false;
+bool Itemset::operator<(const Itemset &itemset) {
+    bool less = true;
+    if (this->mSize==itemset.mSize);
+    else
+    {
+        int size = this->getSize();
+        int i;
+        for (i = 0; i < size; i++)
+        {
+            if (this->mItems[i] > itemset.mItems[i])
+            {
+                less = false;
+            }
+        }
+    }
+
+    return less;
 }
 
-bool Itemset::operator>(Itemset itemset) {
-    return false;
+bool Itemset::operator>(const Itemset &itemset) {
+    bool greater = true;
+    if (this->mSize==itemset.mSize);
+    else
+    {
+        int size = this->getSize();
+        int i;
+        for (i = 0; i < size; i++)
+        {
+            if (this->mItems[i] < itemset.mItems[i])
+            {
+                greater = false;
+            }
+        }
+    }
+
+    return greater;
 }

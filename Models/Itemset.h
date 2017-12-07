@@ -34,8 +34,8 @@ class Itemset
 
         bool operator==(Itemset itemset);
         bool operator!=(Itemset itemset);
-        bool operator<(Itemset itemset);
-        bool operator>(Itemset itemset);
+        bool operator<(const Itemset &itemset);
+        bool operator>(const Itemset &itemset);
 
 	protected:
 		std::string *mItems;
