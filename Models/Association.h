@@ -12,7 +12,7 @@ class Association : public Itemset
 	public:
 		Association();
 
-		Association(std::string *mItems, int &mSize, int &mSupport);
+		Association(int *mItems, int &mSize, int &mSupport);
 
 		virtual ~Association() = default;
 

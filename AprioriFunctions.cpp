@@ -62,10 +62,10 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
     std::ifstream fin;
     std::string line;
     std::stringstream ss;
-    std::string *tmpArr;
+    int *tmpArr = nullptr;
     int numItemsets = 0;
     int numNums;
-    std::string item;
+    int item;
 
     fin.open(fileName);
 
@@ -88,7 +88,7 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
         ss.clear();                                 // RETURNS TO THE BEGINNING OF THE LINE
         ss.seekg(0, fin.beg);
 
-        tmpArr = new std::string[numNums];          // ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
+        tmpArr = new int[numNums];          // ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
 
         for (j = 0; j < numNums; j++)               // LOADS EACH ITEM INTO TMP ARRAY
             ss >> tmpArr[j];
@@ -98,6 +98,5 @@ void loadArray(Itemset *originalTransactions, const std::string &fileName)
     }
 
     fin.close();
-
 	delete tmpArr;
 }
