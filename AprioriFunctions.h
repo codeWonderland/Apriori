@@ -8,10 +8,13 @@
 
 #include "Models/circularQueue.h"
 
-const int SUPPORT = 2;
-const int LARGEST_ITEM = 99;
+const int SUPPORT = 3;
 
 void newFrequency(CircularQueue<Frequency> *&frequencyQueue);
+
+int getNumItems();
+
+void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies);
 
 void outputFrequency(Frequency frequency);
 

@@ -9,7 +9,7 @@
 Frequency::Frequency()
 {
     mID = "";
-    mAssociations = nullptr;
+    mAssociations = new LinkedList<Association>;
 }
 
 Frequency::Frequency(std::string id, LinkedList<Association> &associations)
