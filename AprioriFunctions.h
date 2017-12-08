@@ -11,7 +11,7 @@
 
 void newFrequency(CircularQueue<Frequency> &frequencyQueue, Frequency &newFrequency);
 
-void outputFrequency(Frequency frequency);
+void outputFrequency(Frequency &frequency);
 
 int loadArray(Itemset *&originalTransactions, const std::string &fileName);
 

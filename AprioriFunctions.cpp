@@ -14,7 +14,7 @@ void newFrequency(CircularQueue<Frequency> &frequencyQueue, Frequency &newFreque
 	frequencyQueue.enqueue(newFrequency);
 }
 
-void outputFrequency(Frequency frequency)
+void outputFrequency(Frequency &frequency)
 {
 	std::ofstream outFile;
 	outFile.open("output.txt", ios::out | ios::app);
