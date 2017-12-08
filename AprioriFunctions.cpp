@@ -4,17 +4,17 @@
 
 #include "AprioriFunctions.h"
 
-void newFrequency(CircularQueue<Frequency> &frequencyQueue, Frequency &newFrequency)
+void newFrequency(CircularQueue<Frequency> *&frequencyQueue)
 {
-	if (frequencyQueue.isFull())
+	if (frequencyQueue->isFull())
 	{
-		outputFrequency(frequencyQueue.dequeue());
+		outputFrequency(frequencyQueue->dequeue());
 	}
 
-	frequencyQueue.enqueue(newFrequency);
+	frequencyQueue->enqueue(Frequency());
 }
 
-void outputFrequency(Frequency &frequency)
+void outputFrequency(Frequency frequency)
 {
 	std::ofstream outFile;
 	outFile.open("output.txt", ios::out | ios::app);
