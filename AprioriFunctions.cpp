@@ -109,7 +109,7 @@ int loadArray(Itemset *&originalTransactions, const std::string &fileName)
 	return numItemsets;
 }
 
-void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset &originalTransactions) {
+void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset originalTransactions[], const int &sizeOriginalTransactions) {
 	Association *currentAssociation;
 	/*
 	 * TODO: go through original transactions and search for instances of this, for each instance increase the mSupport of the association
@@ -118,7 +118,7 @@ void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Ite
 	 * then in this gen1stFreq function we would check to see if the support of the association is greater than the minimum and if so append */
 }
 
-void searchAssociation(Association *&association, const Itemset &originalTransactions[], const int &sizeOriginalTransactions)
+void searchAssociation(Association *&association, const Itemset originalTransactions[], const int &sizeOriginalTransactions)
 {
 	int i, j;
 	bool associationExists;
