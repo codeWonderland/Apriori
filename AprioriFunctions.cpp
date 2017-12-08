@@ -53,9 +53,24 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
     while(!currentFrequency->getAssociations()->isEmpty());
 }
 
-Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies)
+Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel)
 {
-    
+    Itemset *candidateSet = new Itemset();
+    Node<Association> *tmp = nullptr;
+    Association *tmpAssoc = nullptr;
+    int i;
+    for (i = 0; i < frequencyLevel-2; i++)
+    {
+        tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
+        while (tmp != nullptr) {
+            tmpAssoc = &tmp->mData;
+            searchAssociation(tmpAssoc, originalTransactions, sizeOriginalTransactions);
+
+
+            tmp = tmp->mNext;
+        }
+
+    }
 }
 
 
