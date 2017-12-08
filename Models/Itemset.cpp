@@ -100,7 +100,7 @@ bool Itemset::operator!=(const Itemset &itemset) {
 
 bool Itemset::operator<(const Itemset &itemset) {
     bool less = false;
-	if (this != itemset)
+	if (*this != itemset)
 	{
 		int leftSize = this->getSize();
 		int rightSize = itemset.getSize();
@@ -122,7 +122,7 @@ bool Itemset::operator<(const Itemset &itemset) {
 
 bool Itemset::operator>(const Itemset &itemset) {
 	bool more = false;
-	if (this != itemset)
+	if (*this != itemset)
 	{
 		int leftSize = this->getSize();
 		int rightSize = itemset.getSize();
@@ -144,7 +144,7 @@ bool Itemset::operator>(const Itemset &itemset) {
 
 bool Itemset::operator>=(const Itemset &itemset) {
 	bool less = false;
-	if (this != itemset)
+	if (*this != itemset)
 	{
 		int leftSize = this->getSize();
 		int rightSize = itemset.getSize();
@@ -166,7 +166,7 @@ bool Itemset::operator>=(const Itemset &itemset) {
 
 bool Itemset::operator<=(const Itemset &itemset) {
 	bool more = false;
-	if (this != itemset)
+	if (*this != itemset)
 	{
 		int leftSize = this->getSize();
 		int rightSize = itemset.getSize();
