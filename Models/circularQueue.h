@@ -43,6 +43,8 @@ class CircularQueue
 		bool isFull();
 
 		friend void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *association);
+
+		void setTailFrequency(int id);
 };
 
 
@@ -139,5 +141,10 @@ bool CircularQueue<T>::isFull()
 	return (mCount == C_CAPACITY);
 }
 
+template<typename T>
+void CircularQueue<T>::setTailFrequency(int id)
+{
+	mList[mTail].setID(id);
+}
 
 #endif

@@ -8,13 +8,12 @@
 
 Frequency::Frequency()
 {
-    mID = "";
-    mAssociations = new LinkedList<Association>;
+    mID = 0;
+    mAssociations = new LinkedList<Association>();
 }
 
-Frequency::Frequency(std::string id, LinkedList<Association> &associations)
+Frequency::Frequency(int id, LinkedList<Association> &associations) : mID(id)
 {
-    mID = std::move(id);
     this->mAssociations = &associations;
 }
 
@@ -23,7 +22,7 @@ Frequency::~Frequency()
     mAssociations->clear();
 }
 
-std::string Frequency::getID() const
+int Frequency::getID() const
 {
     return mID;
 }
@@ -33,9 +32,9 @@ LinkedList<Association>* Frequency::getAssociations() const
     return mAssociations;
 }
 
-void Frequency::setID(std::string id)
+void Frequency::setID(int id)
 {
-    mID = std::move(id);
+    mID = id;
 }
 
 void Frequency::setAssociations(LinkedList<Association> &associations)
