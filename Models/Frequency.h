@@ -20,9 +20,9 @@ public:
     Frequency(std::string id, LinkedList<Association> &associations);
     ~Frequency();
 
-    std::string getID();
+    std::string getID() const;
 
-    LinkedList<Association>* getAssociations();
+    LinkedList<Association>* getAssociations() const;
 
     void setID(std::string id);
     void setAssociations(LinkedList<Association> &associations);

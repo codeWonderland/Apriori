@@ -23,12 +23,12 @@ Frequency::~Frequency()
     mAssociations->clear();
 }
 
-std::string Frequency::getID()
+std::string Frequency::getID() const
 {
     return mID;
 }
 
-LinkedList<Association>* Frequency::getAssociations()
+LinkedList<Association>* Frequency::getAssociations() const
 {
     return mAssociations;
 }

@@ -20,8 +20,6 @@ void outputFrequency(Frequency frequency);
 
 int loadArray(Itemset *&originalTransactions, const std::string &fileName);
 
-void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset originalTransactions[], const int &sizeOriginalTransactions);
-
 void searchAssociation(Association *&association, Itemset originalTransactions[], const int &sizeOriginalTransactions);
 
 

@@ -34,7 +34,16 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
         else
             delete currentAssociation;
     }
+
+    //TODO: Add next level frequencies
 }
+
+Frequency aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies)
+{
+    
+}
+
+
 
 int getNumItems()
 {
@@ -140,17 +149,6 @@ int loadArray(Itemset *&originalTransactions, const std::string &fileName)
 
 
     return numItemsets;
-}
-
-void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset originalTransactions[],
-                            const int &sizeOriginalTransactions)
-{
-    Association *currentAssociation;
-    /*
-     * TODO: go through original transactions and search for instances of this, for each instance increase the mSupport of the association
-     * due to the nature of this we should create a search function - void searchAssociation(Association *&association, const Itemset &originalTransactions)
-     * this function would search through the entire list and increase the mSupport in there
-     * then in this gen1stFreq function we would check to see if the support of the association is greater than the minimum and if so append */
 }
 
 void searchAssociation(Association *&association, Itemset originalTransactions[], const int &sizeOriginalTransactions)
