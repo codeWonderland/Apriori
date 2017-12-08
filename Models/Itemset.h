@@ -32,6 +32,8 @@ class Itemset
 
 		bool searchItem(const int &item) const;
 
+		bool canContain(const Itemset &itemset);
+
 		bool operator<(const Itemset &itemset);
 
 		bool operator>(const Itemset &itemset);

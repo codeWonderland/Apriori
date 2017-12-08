@@ -32,6 +32,29 @@ bool Itemset::searchItem(const int &item) const
 	return false;
 }
 
+bool Itemset::canContain(const Itemset &itemset) {
+    bool possible = false;
+    if (*this != itemset)
+    {
+        int smallestSize = this->getSize() < itemset.getSize() ? this->getSize() : itemset.getSize();
+        int i;
+        for (i = 0; i < smallestSize; i++)
+        {
+            if (this->mItems[i] < itemset.mItems[i])
+            {
+                possible = true;
+                break;
+            }
+            else if (this->mItems[i] > itemset.mItems[i])
+            {
+                possible = false;
+                break;
+            }
+        }
+    }
+    return !possible;
+}
+
 int Itemset::getSize() const
 {
 	return this->mSize;

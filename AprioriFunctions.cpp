@@ -106,7 +106,10 @@ int loadArray(Itemset *&originalTransactions, const std::string &fileName)
     fin.close();
 	tmpArr = nullptr;
 
-	return numItemsets;
+    quickSort(originalTransactions, 0, numItemsets - 1);
+
+
+    return numItemsets;
 }
 
 void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset originalTransactions[], const int &sizeOriginalTransactions) {
@@ -130,7 +133,7 @@ void searchAssociation(Association *&association, Itemset originalTransactions[]
 
 		associationExists = true; // assume true unless proven wrong
 
-		if (originalTransactions[i] <= *association)
+		if (originalTransactions[i].canContain(*association))
 		{
 			//If the size of the associations is greater than the transaction then the association cannot exist
 			if (associationSize > originalTransactions[i].getSize())
