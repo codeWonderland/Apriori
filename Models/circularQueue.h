@@ -43,6 +43,8 @@ class CircularQueue
 		bool isFull();
 
 		friend void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *association);
+
+		friend Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel)
 };
 
 

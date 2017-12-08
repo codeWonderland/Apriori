@@ -33,6 +33,8 @@ class LinkedList
 
 		T getData(int index);
 
+		Node<T>* getHead();
+
 		void setData(int index, T data);
 
 		void clear();
@@ -117,6 +119,11 @@ T LinkedList<T>::getData(int index)
 		tmp = tmp->mNext;
 
 	return tmp->mData;
+}
+
+template<typename T>
+Node<T> *LinkedList<T>::getHead() {
+	return mHead;
 }
 
 
