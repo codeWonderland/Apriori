@@ -57,7 +57,7 @@ void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *assoc
 	frequencyQueue->mList[frequencyQueue->mTail].addAssociation(*association);
 }
 
-int loadArray(Itemset *&originalTransactions, const std::string &fileName)
+int loadArray(Itemset *&originalTransactions, CircularQueue<Frequency> *&frequencies, const std::string &fileName)
 {
     std::ifstream fin;
     std::string line;
