@@ -35,17 +35,19 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
             delete currentAssociation;
     }
 
-    frequencies->setTailFrequency(frequencyNum);
     //TODO: Add next level frequencies
     Frequency *currentFrequency = nullptr;
 
     do
     {
         if (frequencyNum > 2)
-            frequencies->dequeue();
+        {
+            outputFrequency(frequencies->dequeue());
+        }
         if (frequencyNum > 3)
             frequencies->enqueue(*currentFrequency);
-            frequencies->setTailFrequency(frequencyNum);
+
+        frequencies->setTailFrequency(frequencyNum);
 
         frequencyNum++;
         currentFrequency = aprioriGen(originalTransactions, sizeOriginalTransactions, frequencies, frequencyNum);
@@ -56,7 +58,7 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
 Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel)
 {
     auto *candidateSet = new Itemset();
-    auto *currentFrequency = new Frequency;
+    auto *currentFrequency = new Frequency();
     currentFrequency->setID(frequencyLevel);
 
     Node<Association> *tmp = nullptr;
