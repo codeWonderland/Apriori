@@ -6,10 +6,10 @@ int main()
 {
     int sizeOriginalTransactions = 0;
     Itemset *originalTransactions = nullptr;
-    CircularQueue<Frequency> *frequencies = new CircularQueue<Frequency>;
+    auto *frequencies = new CircularQueue<Frequency>();
     std::string fileName = "dataset/T5.N0.1K.D1K.txt";
 
-    sizeOriginalTransactions = loadArray(originalTransactions, frequencies, fileName);
+    sizeOriginalTransactions = loadArray(originalTransactions, fileName);
 
     quickSort(originalTransactions, 0, sizeOriginalTransactions - 1);
     

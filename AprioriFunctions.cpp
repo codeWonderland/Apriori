@@ -57,15 +57,14 @@ void addToFrequency(CircularQueue<Frequency> *frequencyQueue, Association *assoc
 	frequencyQueue->mList[frequencyQueue->mTail].addAssociation(*association);
 }
 
-int loadArray(Itemset *&originalTransactions, CircularQueue<Frequency> *&frequencies, const std::string &fileName)
+int loadArray(Itemset *&originalTransactions, const std::string &fileName)
 {
     std::ifstream fin;
     std::string line;
     std::stringstream ss;
     int *tmpArr = nullptr;
     int numItemsets = 0;
-    int numNums;
-    int item;
+    int numNums, item;
 
     fin.open(fileName);
 
@@ -108,4 +107,13 @@ int loadArray(Itemset *&originalTransactions, CircularQueue<Frequency> *&frequen
 	tmpArr = nullptr;
 
 	return numItemsets;
+}
+
+void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset &originalTransactions) {
+	Association *currentAssociation;
+	/*
+	 * TODO: go through original transactions and search for instances of this, for each instance increase the mSupport of the association
+	 * due to the nature of this we should create a search function - void searchAssociation(Association *&association, const Itemset &originalTransactions)
+	 * this function would search through the entire list and increase the mSupport in there
+	 * then in this gen1stFreq function we would check to see if the support of the association is greater than the minimum and if so append */
 }
