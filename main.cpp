@@ -11,14 +11,7 @@ int main()
     sizeOriginalTransactions = loadArray(originalTransactions, fileName);
 
     quickSort(originalTransactions, 0, sizeOriginalTransactions - 1);
-
-    int i, j;
-    for (i = 0; i < 1000; i++)
-    {
-        for (j = 0; j < originalTransactions[i].getSize(); j++)
-            std::cout << originalTransactions[i].getItem(j) << " ";
-       std::cout << std::endl;
-    }
+    
     delete originalTransactions;
 	return 0;
 }

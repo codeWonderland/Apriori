@@ -8,118 +8,118 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug"/>
+				<Option working_dir="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fa17_csi281_decosta_easter">
-				<Option output="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/fa17_csi281_decosta_easter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug"/>
+				<Option output="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/fa17_csi281_decosta_easter.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 fa17_csi281_decosta_easter"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 fa17_csi281_decosta_easter"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fa17_csi281_decosta_easter/fast">
-				<Option output="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/fa17_csi281_decosta_easter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug"/>
+				<Option output="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/fa17_csi281_decosta_easter.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 fa17_csi281_decosta_easter/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/aliceeaster/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 fa17_csi281_decosta_easter/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/AprioriFunctions.cpp">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/AprioriFunctions.cpp">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/AprioriFunctions.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/AprioriFunctions.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Association.cpp">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Association.cpp">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Association.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Association.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Frequency.cpp">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Frequency.cpp">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Frequency.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Frequency.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Itemset.cpp">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Itemset.cpp">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Itemset.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Itemset.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/Node.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/Node.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/circularQueue.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/circularQueue.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/Models/linkedList.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/Models/linkedList.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/main.cpp">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/main.cpp">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/sortingFunction.h">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/sortingFunction.h">
 			<Option target="fa17_csi281_decosta_easter"/>
 		</Unit>
-		<Unit filename="/Users/aliceeaster/fa17-csi281-decosta-easter/CMakeLists.txt">
+		<Unit filename="C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

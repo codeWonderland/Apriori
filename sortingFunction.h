@@ -35,7 +35,7 @@ void swapElement(T &ob1, T &ob2)
  *  Purpose:  To sort a list using quick sort
  *****************************************************************************/
 template <typename T>
-void quickSort(T list[], int lowerBound, int upperBound) 
+void quickSort(T list[], int lowerBound, int upperBound)
 {
    int i, j;
    T   pivot;
