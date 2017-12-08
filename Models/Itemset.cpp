@@ -99,77 +99,89 @@ bool Itemset::operator!=(const Itemset &itemset) {
 }
 
 bool Itemset::operator<(const Itemset &itemset) {
-    bool less = true;
-    if (this->mSize==itemset.mSize);
-    else
-    {
-        int size = this->getSize();
-        int i;
-        for (i = 0; i < size; i++)
-        {
-            if (this->mItems[i] > itemset.mItems[i])
-            {
-                less = false;
-            }
-        }
-    }
-
+    bool less = false;
+	if (this != itemset)
+	{
+		int leftSize = this->getSize();
+		int rightSize = itemset.getSize();
+		int smallestSize = leftSize < rightSize ? leftSize : rightSize;
+		int i;
+		for (i = 0; i < smallestSize; i++)
+		{
+			if (this->mItems[i] < itemset.mItems[i])
+			{
+				less = true;
+				break;
+			}
+		}
+		if (!less && rightSize > leftSize)
+			less = true;
+	}
     return less;
 }
 
 bool Itemset::operator>(const Itemset &itemset) {
-    bool greater = true;
-    if (this->mSize==itemset.mSize);
-    else
-    {
-        int size = this->getSize();
-        int i;
-        for (i = 0; i < size; i++)
-        {
-            if (this->mItems[i] < itemset.mItems[i])
-            {
-                greater = false;
-            }
-        }
-    }
-
-    return greater;
-}
-
-bool Itemset::operator>=(const Itemset &itemset) {
-	bool less = true;
-	if (this->mSize == itemset.mSize);
-	else
+	bool more = false;
+	if (this != itemset)
 	{
-		int size = this->getSize();
+		int leftSize = this->getSize();
+		int rightSize = itemset.getSize();
+		int smallestSize = leftSize < rightSize ? leftSize : rightSize;
 		int i;
-		for (i = 0; i < size; i++)
+		for (i = 0; i < smallestSize; i++)
 		{
 			if (this->mItems[i] > itemset.mItems[i])
 			{
-				less = false;
+				more = true;
+				break;
 			}
 		}
+		if (!more && leftSize > rightSize)
+			more = true;
 	}
+	return more;
+}
 
+bool Itemset::operator>=(const Itemset &itemset) {
+	bool less = false;
+	if (this != itemset)
+	{
+		int leftSize = this->getSize();
+		int rightSize = itemset.getSize();
+		int smallestSize = leftSize < rightSize ? leftSize : rightSize;
+		int i;
+		for (i = 0; i < smallestSize; i++)
+		{
+			if (this->mItems[i] < itemset.mItems[i])
+			{
+				less = true;
+				break;
+			}
+		}
+		if (!less && rightSize > leftSize)
+			less = true;
+	}
 	return !less;
 }
 
 bool Itemset::operator<=(const Itemset &itemset) {
-	bool greater = true;
-	if (this->mSize == itemset.mSize);
-	else
+	bool more = false;
+	if (this != itemset)
 	{
-		int size = this->getSize();
+		int leftSize = this->getSize();
+		int rightSize = itemset.getSize();
+		int smallestSize = leftSize < rightSize ? leftSize : rightSize;
 		int i;
-		for (i = 0; i < size; i++)
+		for (i = 0; i < smallestSize; i++)
 		{
-			if (this->mItems[i] < itemset.mItems[i])
+			if (this->mItems[i] > itemset.mItems[i])
 			{
-				greater = false;
+				more = true;
+				break;
 			}
 		}
+		if (!more && leftSize > rightSize)
+			more = true;
 	}
-
-	return !greater;
+	return !more;
 }
