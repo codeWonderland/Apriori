@@ -118,7 +118,7 @@ void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Ite
 	 * then in this gen1stFreq function we would check to see if the support of the association is greater than the minimum and if so append */
 }
 
-void searchAssociation(Association *&association, const Itemset originalTransactions[], const int &sizeOriginalTransactions)
+void searchAssociation(Association *&association, Itemset originalTransactions[], const int &sizeOriginalTransactions)
 {
 	int i, j;
 	bool associationExists;
