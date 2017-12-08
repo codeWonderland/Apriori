@@ -128,22 +128,29 @@ void searchAssociation(Association *&association, const Itemset &originalTransac
 	for (i = 0; i < sizeOriginalTransactions; i++)
 	{
 
-		associationExists = true; //associationExists unless otherwise proven false
+		associationExists = true; // assume true unless proven wrong
 
-		//Loops through every item in associations
-		for (j = 0; j < associationSize; j++)
+		if (originalTransactions[i] <= *association)
 		{
 			//If the size of the associations is greater than the transaction then the association cannot exist
 			if (associationSize > originalTransactions[i].getSize())
 				associationExists = false;
-
-			// If an item in the association doesn't exist in the transaction then association doesn't exist
-			else if (!originalTransactions[i].searchItem(association->getItem(j)))
+			else
 			{
-				associationExists = false;
-				break;	//Stops looping through this association since it cannot exist
+				//Loops through every item in associations
+				for (j = 0; j < associationSize; j++)
+				{
+					// If an item in the association doesn't exist in the transaction then association doesn't exist
+					if (!originalTransactions[i].searchItem(association->getItem(j)))
+					{
+						associationExists = false;
+						break;	//Stops looping through this association since it cannot exist
+					}
+				}
 			}
 		}
+		else
+			break;
 		// Increases the support of the association if the association exists
 		if (associationExists)
 		{

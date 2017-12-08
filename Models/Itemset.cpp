@@ -25,9 +25,9 @@ bool Itemset::searchItem(const int &item) const
 	for (i; i < this->mSize; i++)
 	{
 		if (this->mItems[i] == item)
-		{
 			return true;
-		}
+		else if (this->mItems[i] > item)
+			return false;
 	}
 	return false;
 }
