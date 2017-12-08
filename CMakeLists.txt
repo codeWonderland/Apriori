@@ -15,5 +15,5 @@ add_executable(fa17_csi281_decosta_easter
         Models/Node.h
         AprioriFunctions.cpp
         AprioriFunctions.h
-        Sorting.h
+        sortingFunction.h
         main.cpp)

@@ -10,7 +10,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include "../Sorting.h"
+#include "../sortingFunction.h"
 
 template<typename R>
 struct Node
