@@ -117,3 +117,37 @@ void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Ite
 	 * this function would search through the entire list and increase the mSupport in there
 	 * then in this gen1stFreq function we would check to see if the support of the association is greater than the minimum and if so append */
 }
+
+void searchAssociation(Association *&association, const Itemset &originalTransactions[], const int &sizeOriginalTransactions)
+{
+	int i, j;
+	bool associationExists;
+	int associationSize = association->getSize();
+	
+	//Loops through all of the original transactions
+	for (i = 0; i < sizeOriginalTransactions; i++)
+	{
+
+		associationExists = true; //associationExists unless otherwise proven false
+
+		//Loops through every item in associations
+		for (j = 0; j < associationSize; j++)
+		{
+			//If the size of the associations is greater than the transaction then the association cannot exist
+			if (associationSize > originalTransactions[i].getSize())
+				associationExists = false;
+
+			// If an item in the association doesn't exist in the transaction then association doesn't exist
+			else if (!originalTransactions[i].searchItem(association->getItem(j)))
+			{
+				associationExists = false;
+				break;	//Stops looping through this association since it cannot exist
+			}
+		}
+		// Increases the support of the association if the association exists
+		if (associationExists)
+		{
+			association->setSupport(association->getSupport()+1);
+		}
+	}
+}

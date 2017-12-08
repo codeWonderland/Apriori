@@ -19,7 +19,7 @@ void Itemset::setItems(int *items)
 	this->mItems = items;
 }
 
-bool Itemset::searchItem(const int &item)
+bool Itemset::searchItem(const int &item) const
 {
 	int i = 0;
 	for (i; i < this->mSize; i++)

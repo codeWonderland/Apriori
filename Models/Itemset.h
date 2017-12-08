@@ -30,7 +30,7 @@ class Itemset
 
 		void setItems(int *items);
 
-		bool searchItem(const int &item);
+		bool searchItem(const int &item) const;
 
 		bool operator<(const Itemset &itemset);
 
