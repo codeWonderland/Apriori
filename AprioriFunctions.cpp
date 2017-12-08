@@ -26,7 +26,7 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
         currentAssociation = new Association(new int[associationSize]{i}, associationSize);
         searchAssociation(currentAssociation, originalTransactions, sizeOriginalTransactions);
 
-        if (currentAssociation->getSupport() > SUPPORT)
+        if (currentAssociation->getSupport() >= SUPPORT)
         {
             addToFrequency(frequencies, currentAssociation);
             currentAssociation = nullptr;
@@ -48,14 +48,17 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
             frequencies->setTailFrequency(frequencyNum);
 
         frequencyNum++;
-        currentFrequency = aprioriGen(originalTransactions, sizeOriginalTransactions, frequencies);
+        currentFrequency = aprioriGen(originalTransactions, sizeOriginalTransactions, frequencies, frequencyNum);
     }
     while(!currentFrequency->getAssociations()->isEmpty());
 }
 
 Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel)
 {
-    Itemset *candidateSet = new Itemset();
+    auto *candidateSet = new Itemset();
+    auto *currentFrequency = new Frequency;
+    currentFrequency->setID(frequencyLevel);
+
     Node<Association> *tmp = nullptr;
     Association *tmpAssoc = nullptr;
     int i;
@@ -66,11 +69,19 @@ Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTra
             tmpAssoc = &tmp->mData;
             searchAssociation(tmpAssoc, originalTransactions, sizeOriginalTransactions);
 
+            if (tmpAssoc->getSupport() >= SUPPORT)
+            {
+                currentFrequency->addAssociation(*tmpAssoc);
+            }
+            else
+                tmpAssoc = nullptr;
 
             tmp = tmp->mNext;
         }
 
     }
+
+    return currentFrequency;
 }
 
 
