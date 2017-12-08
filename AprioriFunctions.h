@@ -19,7 +19,7 @@ int loadArray(Itemset *&originalTransactions, const std::string &fileName);
 
 void generateFirstFrequency(CircularQueue<Frequency> *&frequencyQueue, const Itemset originalTransactions[], const int &sizeOriginalTransactions);
 
-void searchAssociation(Association *&association, const Itemset originalTransactions[], const int &sizeOriginalTransactions)
+void searchAssociation(Association *&association, const Itemset originalTransactions[], const int &sizeOriginalTransactions);
 
 
 #endif //FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H
