@@ -1,3 +1,0 @@
-C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/CMakeFiles/fa17_csi281_decosta_easter.dir
-C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/alice.easter/Desktop/fa17-csi281-decosta-easter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
