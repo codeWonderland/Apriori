@@ -13,6 +13,6 @@ void newFrequency(CircularQueue<Frequency> &frequencyQueue, Frequency &newFreque
 
 void outputFrequency(Frequency frequency);
 
-void loadArray(Itemset *&originalTransactions, const std::string &fileName);
+int loadArray(Itemset *&originalTransactions, const std::string &fileName);
 
 #endif //FA17_CSI281_DECOSTA_EASTER_APRIORIFUNCTIONS_H

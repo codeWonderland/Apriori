@@ -34,7 +34,7 @@ bool Itemset::searchItem(const int &item)
 
 int Itemset::getSize() const
 {
-	return mSize;
+	return this->mSize;
 }
 
 void Itemset::setSize(int size)
