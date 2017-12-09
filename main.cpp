@@ -7,7 +7,7 @@ int main()
     int sizeOriginalTransactions = 0;
     Itemset *originalTransactions = nullptr;
     auto *frequencies = new CircularQueue<Frequency>();
-    std::string fileName = "dataset/T25.N1K.D100K.txt";
+    std::string fileName = "dataset/T20.N0.1K.D1K.txt";
 
     sizeOriginalTransactions = loadArray(originalTransactions, fileName);
 
