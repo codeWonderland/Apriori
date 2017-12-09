@@ -70,7 +70,7 @@ void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransacti
     Node<Association> *tmpInner = nullptr;
     Association *tmpAssoc = nullptr;
     int *tmpArray = nullptr;
-    int tmpArraySize = frequencyLevel - 1;
+    int tmpArraySize = frequencyLevel;
     int i, j;
 
     tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
@@ -116,9 +116,12 @@ void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransacti
             if (tmpAssoc->getSupport() >= SUPPORT)
             {
                 currentFrequency->addAssociation(*tmpAssoc);
+                tmpAssoc = nullptr;
             }
             else
+            {
                 delete tmpAssoc;
+            }
 
             tmpInner = tmpInner->mNext;
         }
@@ -218,13 +221,13 @@ int loadArray(Itemset *&originalTransactions, const std::string &fileName)
         ss.clear();                                 // RETURNS TO THE BEGINNING OF THE LINE
         ss.seekg(0, fin.beg);
 
-        tmpArr = new int[numNums];                // ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
+        tmpArr = new int[numNums];                  // ALLOCATES THE TMP ARRAY WITH THE NUMBER OF ITEMS
 
         for (j = 0; j < numNums; j++)               // LOADS EACH ITEM INTO TMP ARRAY
             ss >> tmpArr[j];
 
         originalTransactions[i].setItems(tmpArr);
-        originalTransactions[i].setSize(numNums);    // CREATES EACH ITEMSET
+        originalTransactions[i].setSize(numNums);   // CREATES EACH ITEMSET
     }
 
     fin.close();

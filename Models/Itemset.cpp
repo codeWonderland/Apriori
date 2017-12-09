@@ -71,8 +71,13 @@ Itemset::Itemset(int size) : mSize(size)
 	this->mItems = new int[size];
 }
 
-Itemset::Itemset(int *mItems, int mSize) : mItems(mItems), mSize(mSize)
+Itemset::Itemset(int *items, int size)
 {
+    mItems = new int[size];
+    mSize = size;
+    int i;
+    for (i = 0; i < mSize; i++)
+        mItems[i] = items[i];
 
 }
 

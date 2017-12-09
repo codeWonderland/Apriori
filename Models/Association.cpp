@@ -9,7 +9,7 @@ Association::Association() : Itemset()
 
 }
 
-Association::Association(int *mItems, int &mSize) : Itemset(mItems, mSize), mSupport(0)
+Association::Association(int *items, int &size) : Itemset(items, size), mSupport(0)
 {
 
 }

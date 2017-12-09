@@ -16,7 +16,7 @@ class Itemset
 
 		Itemset(int size);
 
-		Itemset(int *mItems, int mSize);
+		Itemset(int *items, int size);
 
 		virtual ~Itemset() = default;
 
