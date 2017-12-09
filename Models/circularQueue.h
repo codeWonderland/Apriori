@@ -46,7 +46,7 @@ class CircularQueue
 
 		void setTailFrequency(int id);
 
-		friend Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel);
+		friend void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel, Frequency *&currentFrequency);
 };
 
 

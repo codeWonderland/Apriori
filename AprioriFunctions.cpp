@@ -44,31 +44,71 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
         {
             outputFrequency(frequencies->dequeue());
         }
-        if (frequencyNum > 3)
+        if (frequencyNum >= 2)
             frequencies->enqueue(*currentFrequency);
 
         frequencies->setTailFrequency(frequencyNum);
 
         frequencyNum++;
-        currentFrequency = aprioriGen(originalTransactions, sizeOriginalTransactions, frequencies, frequencyNum);
+        aprioriGen(originalTransactions, sizeOriginalTransactions, frequencies, frequencyNum, currentFrequency);
     }
     while(!currentFrequency->getAssociations()->isEmpty());
+
+    while(!frequencies->isEmpty())
+    {
+        outputFrequency(frequencies->dequeue());
+    }
 }
 
-Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel)
+void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel, Frequency *&currentFrequency)
 {
     auto *candidateSet = new Itemset();
-    auto *currentFrequency = new Frequency();
+    currentFrequency = new Frequency();
     currentFrequency->setID(frequencyLevel);
 
     Node<Association> *tmp = nullptr;
+    Node<Association> *tmpInner = nullptr;
     Association *tmpAssoc = nullptr;
-    int i;
-    for (i = 0; i < frequencyLevel-2; i++)
-    {
-        tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
-        while (tmp != nullptr) {
-            tmpAssoc = &tmp->mData;
+    int *tmpArray = nullptr;
+    int tmpArraySize = frequencyLevel - 1;
+    int i, j;
+
+    tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
+    while (tmp != nullptr) {
+        tmpArray = new int[frequencyLevel];
+        tmpInner = tmp->mNext;
+        for (i = 0; i < frequencyLevel - 1; i++)
+        {
+            tmpArray[i] = tmp->mData.getItem(i);
+        }
+
+        while (tmpInner != nullptr)
+        {
+            if (frequencyLevel != 2)
+            {
+                for (j = 0; j < frequencyLevel - 2; j++)
+                {
+                    if (tmp->mData.getItem(j) == tmpInner->mData.getItem(j))
+                    {
+                        continue;
+                    }
+                    else if (j < frequencyLevel - 2)
+                    {
+                        break;
+                    }
+                }
+
+                if (j == frequencyLevel - 2)
+                {
+                    tmpArray[tmpArraySize] = tmpInner->mData.getItem(j);
+                }
+            }
+            else
+            {
+                tmpArray[1] = tmpInner->mData.getItem(0);
+            }
+
+            tmpAssoc = new Association(tmpArray, tmpArraySize);
             searchAssociation(tmpAssoc, originalTransactions, sizeOriginalTransactions);
 
             if (tmpAssoc->getSupport() >= SUPPORT)
@@ -76,14 +116,12 @@ Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTra
                 currentFrequency->addAssociation(*tmpAssoc);
             }
             else
-                tmpAssoc = nullptr;
+                delete tmpAssoc;
 
-            tmp = tmp->mNext;
+            tmpInner = tmpInner->mNext;
         }
-
+        tmp = tmp->mNext;
     }
-
-    return currentFrequency;
 }
 
 

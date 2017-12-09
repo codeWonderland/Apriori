@@ -16,7 +16,7 @@ int getNumItems();
 
 void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies);
 
-Frequency* aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies);
+void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, Frequency *&currentFrequency);
 
 void outputFrequency(Frequency frequency);
 
