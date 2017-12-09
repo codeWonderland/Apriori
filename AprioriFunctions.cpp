@@ -11,7 +11,8 @@ void newFrequency(CircularQueue<Frequency> *&frequencyQueue)
         outputFrequency(frequencyQueue->dequeue());
     }
 
-    frequencyQueue->enqueue(Frequency());
+    Frequency tmp;
+    frequencyQueue->enqueue(tmp);
 }
 
 void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions,
@@ -35,7 +36,6 @@ void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions
             delete currentAssociation;
     }
 
-    //TODO: Add next level frequencies
     Frequency *currentFrequency = nullptr;
 
     do
@@ -75,8 +75,10 @@ void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransacti
 
     tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
     while (tmp != nullptr) {
+
         tmpArray = new int[frequencyLevel];
         tmpInner = tmp->mNext;
+
         for (i = 0; i < frequencyLevel - 1; i++)
         {
             tmpArray[i] = tmp->mData.getItem(i);
@@ -164,8 +166,10 @@ void outputList(LinkedList<Association> *linkedList)
     {
         for (i = 0; i < tmp->mData.getSize(); i++)
         {
-            outFile << tmp->mData.getItem(i) << "; Support: " << tmp->mData.getSupport() << "\n";
+            outFile << tmp->mData.getItem(i) << " ";
         }
+
+        outFile << "; Support: " << tmp->mData.getSupport() << "\n";
         tmp = tmp->mNext;
     }
 

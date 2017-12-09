@@ -34,7 +34,7 @@ class CircularQueue
 
 		void display();
 
-		void enqueue(T data);
+		void enqueue(T &data);
 
 		bool isEmpty();
 
@@ -95,7 +95,7 @@ void CircularQueue<T>::display()
 
 
 template<typename T>
-void CircularQueue<T>::enqueue(T data)
+void CircularQueue<T>::enqueue(T &data)
 {
 	if (!isFull())
 	{
