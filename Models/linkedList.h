@@ -53,7 +53,7 @@ class LinkedList
 
 		T operator[](int index);
 
-		friend void outputList(LinkedList<Association> *linkedList);
+		friend void outputList(LinkedList<Association> *linkedList, int frequencyNumber);
 };
 
 

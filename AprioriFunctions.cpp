@@ -73,7 +73,11 @@ void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransacti
     int tmpArraySize = frequencyLevel;
     int i, j;
 
-    tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
+    if (frequencyLevel == 2)
+        tmp = frequencies->mList[frequencies->mHead].getAssociations()->getHead();
+    else
+        tmp = frequencies->mList[frequencies->mTail].getAssociations()->getHead();
+
     while (tmp != nullptr) {
 
         tmpArray = new int[frequencyLevel];
@@ -102,7 +106,7 @@ void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransacti
 
                 if (j == frequencyLevel - 2)
                 {
-                    tmpArray[tmpArraySize] = tmpInner->mData.getItem(j);
+                    tmpArray[frequencyLevel - 1] = tmpInner->mData.getItem(j);
                 }
             }
             else
@@ -144,11 +148,9 @@ void outputFrequency(Frequency frequency)
     std::ofstream outFile;
     outFile.open("output.txt", ios::out | ios::app);
 
-    outFile << "Frequency " << frequency.getID() << ":\n";
-
     LinkedList<Association> *associationList = frequency.getAssociations();
 
-    outputList(associationList);
+    outputList(associationList, frequency.getID());
 
     outFile << "\n";
 
@@ -157,11 +159,13 @@ void outputFrequency(Frequency frequency)
     outFile.close();
 }
 
-void outputList(LinkedList<Association> *linkedList)
+void outputList(LinkedList<Association> *linkedList, int frequencyNumber)
 {
     int i = 0;
     std::ofstream outFile;
     outFile.open("output.txt", ios::out | ios::app);
+
+    outFile << "Frequency " << frequencyNumber << ":\n";
 
     Node<Association> *tmp = linkedList->mHead;
 

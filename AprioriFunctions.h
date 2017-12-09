@@ -8,7 +8,7 @@
 
 #include "Models/circularQueue.h"
 
-const int SUPPORT = 3;
+const int SUPPORT = 2;
 
 void newFrequency(CircularQueue<Frequency> *&frequencyQueue);
 
@@ -16,7 +16,7 @@ int getNumItems();
 
 void apriori(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies);
 
-void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, Frequency *&currentFrequency);
+void aprioriGen(Itemset *&originalTransactions, const int &sizeOriginalTransactions, CircularQueue<Frequency> *&frequencies, const int &frequencyLevel, Frequency *&currentFrequency);
 
 void outputFrequency(Frequency frequency);
 

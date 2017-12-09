@@ -55,7 +55,7 @@ CircularQueue<T>::CircularQueue()
 {
 	mHead = 0;
 	mTail = 0;
-	mCount = 0;
+	mCount = 1;
 }
 
 
