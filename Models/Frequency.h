@@ -1,6 +1,14 @@
-//
-// Created by adam.decosta on 12/4/2017.
-//
+/* ***       Author:  Adam DeCosta & Alice Easter
+     *  Last Update:  December 8th, 2017
+     *        Class:  CSI-281
+     *     Filename:  Association.h
+     *
+     *  Description:
+     *      Header for Frequency.cpp
+     *
+     *  Certification of Authenticity:
+     *     I certify that this assignment is entirely my work.
+     ******************************************************************/
 
 #ifndef FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H
 #define FA17_CSI281_DECOSTA_EASTER_FREQUENCY_H

@@ -1,6 +1,14 @@
-//
-// Created by adam.decosta on 12/4/2017.
-//
+/* ***       Author:  Adam DeCosta & Alice Easter
+     *  Last Update:  December 8th, 2017
+     *        Class:  CSI-281
+     *     Filename:  Frequency.cpp
+     *
+     *  Description:
+     *      Definitions for Frequency Object
+     *
+     *  Certification of Authenticity:
+     *     I certify that this assignment is entirely my work.
+     ******************************************************************/
 
 #include "Frequency.h"
 
